@@ -2,7 +2,7 @@ name: Build PBR
 
 on:
   schedule:
-    - cron: "2 0/1 * * *"
+    - cron: "2 0 */15 * *"
   workflow_dispatch:
 
 jobs:
