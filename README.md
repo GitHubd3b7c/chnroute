@@ -7,9 +7,9 @@ ip段信息取自 [misakaio](https://github.com/misakaio/chnroutes2)
 
 **CN.rsc** 是往Firewall - address lists 里生ip段列表。
 ```
-/file remove [find name="CN.rsc"]
-/tool fetch url="https://cdn.jsdelivr.net/gh/GitHubd3b7c/chnroute@main/CN.rsc"
-:if ([:len [/file find name=CN.rsc]] > 0) do={
+/file remove [find name="CNip.rsc"]
+/tool fetch url="https://cdn.jsdelivr.net/gh/GitHubd3b7c/chnroute/blob/main/CN.rsc"
+:if ([:len [/file find name=CNip.rsc]] > 0) do={
 /ip firewall address-list remove [find comment="AS4809"]
 /import CN.rsc
 }
